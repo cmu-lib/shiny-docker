@@ -12,4 +12,5 @@ RUN R -e "install.packages(c('drake'))"
 
 COPY ./shiny-server.conf /etc/shiny-server/shiny-server.conf
 COPY ./templates /etc/shiny-server/templates
-COPY apps /srv/shiny-server
+RUN rm -rf /srv/shiny-server/*
+COPY ./apps /srv/shiny-server
