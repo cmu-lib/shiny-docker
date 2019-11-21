@@ -11,3 +11,4 @@ RUN R -e "install.packages(c('ggbeeswarm'))"
 RUN R -e "install.packages(c('drake'))"
 
 COPY ./shiny-server.conf /etc/shiny-server/shiny-server.conf
+COPY ./templates /etc/shiny-server/templates

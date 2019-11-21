@@ -8,7 +8,6 @@ services:
     volumes:
       - ./apps/:/srv/shiny-server/
       - ./shiny_logs/:/var/log/shiny-server/
-      - ./templates/:/etc/shiny-server/templates/
 
   nginx:
     image: nginx:1.17.6
