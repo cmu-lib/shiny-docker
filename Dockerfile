@@ -9,6 +9,9 @@ RUN R -e "install.packages(c('gridExtra'))"
 RUN R -e "install.packages(c('ggrepel'))"
 RUN R -e "install.packages(c('ggbeeswarm'))"
 RUN R -e "install.packages(c('drake'))"
+RUN R -e "install.packages(c('kableExtra'))"
+RUN R -e "install.packages(c('cowplot'))"
+RUN R -e "install.packages(c('shinyWidgets'))"
 
 COPY ./shiny-server.conf /etc/shiny-server/shiny-server.conf
 COPY ./templates /etc/shiny-server/templates
