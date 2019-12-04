@@ -7,7 +7,7 @@ services:
       - 3838
     volumes:
       - ./shiny_logs/:/var/log/shiny-server/
-      - ./apps/:/srv/shiny_server/
+      - ./apps/:/srv/shiny-server/
     restart: always
 
   nginx:
