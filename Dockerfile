@@ -12,6 +12,7 @@ RUN R -e "install.packages(c('drake'))"
 RUN R -e "install.packages(c('kableExtra'))"
 RUN R -e "install.packages(c('cowplot'))"
 RUN R -e "install.packages(c('shinyWidgets'))"
+RUN R -e "install.packages(c('bookdown'))"
 
 COPY ./shiny-server.conf /etc/shiny-server/shiny-server.conf
 COPY ./templates /etc/shiny-server/templates
