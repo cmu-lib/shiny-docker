@@ -18,4 +18,4 @@ RUN R -e "install.packages(c('e1071'))"
 COPY ./shiny-server.conf /etc/shiny-server/shiny-server.conf
 COPY ./templates /etc/shiny-server/templates
 RUN rm -rf /srv/shiny-server/*
-COPY ./apps /srv/shiny-server
+# COPY ./apps /srv/shiny-server
