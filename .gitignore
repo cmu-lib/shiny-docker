@@ -1,2 +1,5 @@
 apps/
 shiny_logs/
+.htpasswd
+*.cer
+*.key
