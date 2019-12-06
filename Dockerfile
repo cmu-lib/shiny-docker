@@ -14,7 +14,6 @@ RUN R -e "install.packages(c('cowplot'))"
 RUN R -e "install.packages(c('shinyWidgets'))"
 RUN R -e "install.packages(c('bookdown'))"
 RUN R -e "install.packages(c('e1071'))"
-RUN R -e "install.packages(c('ggplotlyExtra'))"
 
 COPY ./shiny-server.conf /etc/shiny-server/shiny-server.conf
 COPY ./templates /etc/shiny-server/templates
