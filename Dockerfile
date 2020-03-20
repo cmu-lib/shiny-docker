@@ -16,6 +16,7 @@ RUN R -e "install.packages(c('bookdown'))"
 RUN R -e "install.packages(c('e1071'))"
 RUN R -e "install.packages(c('quanteda'))"
 RUN R -e "install.packages(c('tidytext'))"
+RUN R -e "install.packages(c('shinydashboard'))"
 
 COPY ./shiny-server.conf /etc/shiny-server/shiny-server.conf
 COPY ./templates /etc/shiny-server/templates
