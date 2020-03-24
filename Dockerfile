@@ -17,6 +17,12 @@ RUN R -e "install.packages(c('e1071'), repos = 'https://cloud.r-project.org')"
 RUN R -e "install.packages(c('quanteda'), repos = 'https://cloud.r-project.org')"
 RUN R -e "install.packages(c('tidytext'), repos = 'https://cloud.r-project.org')"
 RUN R -e "install.packages(c('shinydashboard'), repos = 'https://cloud.r-project.org')"
+RUN R -e "install.packages(c('htmlwidgets'), repos = 'https://cloud.r-project.org')"
+RUN R -e "install.packages(c('sparkline'), repos = 'https://cloud.r-project.org')"
+RUN R -e "install.packages(c('DT'), repos = 'https://cloud.r-project.org')"
+
+
+
 
 COPY ./shiny-server.conf /etc/shiny-server/shiny-server.conf
 COPY ./templates /etc/shiny-server/templates
