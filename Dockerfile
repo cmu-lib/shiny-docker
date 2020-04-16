@@ -1,4 +1,4 @@
-FROM rocker/shiny-verse:3.6.1
+FROM rocker/shiny-verse:3.6.3
 
 RUN R -e "install.packages(c('plotly'), repos = 'https://cloud.r-project.org')"
 RUN R -e "install.packages(c('dtplyr'), repos = 'https://cloud.r-project.org')"
