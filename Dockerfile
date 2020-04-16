@@ -1,5 +1,6 @@
-FROM rocker/shiny-verse:3.6.3
+FROM rocker/shiny:3.6.3
 
+RUN R -e "install.packages(c('tidyverse', repos = 'https://cloud.r-project.org')"
 RUN R -e "install.packages(c('plotly'), repos = 'https://cloud.r-project.org')"
 RUN R -e "install.packages(c('dtplyr'), repos = 'https://cloud.r-project.org')"
 RUN R -e "install.packages(c('ggridges'), repos = 'https://cloud.r-project.org')"
