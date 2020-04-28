@@ -21,6 +21,7 @@ RUN R -e "install.packages(c('htmlwidgets'), repos = 'https://cloud.r-project.or
 RUN R -e "install.packages(c('sparkline'), repos = 'https://cloud.r-project.org')"
 RUN R -e "install.packages(c('DT'), repos = 'https://cloud.r-project.org')"
 RUN R -e "install.packages(c('openxlsx'), repos = 'https://cloud.r-project.org')"
+RUN R -e "install.packages(c('patchwork'), repos = 'https://cloud.r-project.org')"
 RUN R -e "devtools::install_github('krassowski/complex-upset')"
 
 COPY ./shiny-server.conf /etc/shiny-server/shiny-server.conf
