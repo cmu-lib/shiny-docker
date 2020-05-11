@@ -24,8 +24,11 @@ RUN R -e "install.packages(c('openxlsx'), repos = 'https://cloud.r-project.org')
 RUN R -e "install.packages(c('patchwork'), repos = 'https://cloud.r-project.org')"
 RUN R -e "devtools::install_github('krassowski/complex-upset')"
 RUN R -e "install.packages(c('renv'), repos = 'https://cloud.r-project.org')"
-RUN apt-get update
-RUN apt-get install libgsl2
+RUN wget ftp://ftp.gnu.org/gnu/gsl/gsl-2.6.tar.gz
+RUN tar -xvf gsl-2.6.tar.gz
+WORKDIR gsl-2.6
+RUN ./configure && make && make install
+WORKDIR /root
 RUN R -e "install.packages(c('topicmodels'), repos = 'https://cloud.r-project.org')"
 
 COPY ./shiny-server.conf /etc/shiny-server/shiny-server.conf
